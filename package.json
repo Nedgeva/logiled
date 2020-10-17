@@ -37,7 +37,6 @@
     "node-gyp": "^6.0.1",
     "nw-gyp": "^3.6.5",
     "prebuild": "^9.1.1",
-    "progress-bar": "^0.1.1",
     "request": "^2.88.0",
     "ts-node": "^8.5.4",
     "typescript": "^3.7.2",

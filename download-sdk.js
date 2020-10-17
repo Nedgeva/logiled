@@ -1,11 +1,11 @@
-const LOGITECH_LED_SDK_URL = "https://gaming.logitech.com/sdk/LED_8.87.zip";
+const LOGITECH_LED_SDK_URL = "https://gaming.logitech.com/sdk/LED_9.00.zip";
 
-var fs = require("fs");
-var path = require("path");
-var EOL = require("os").EOL;
-var unzip = require("unzipper");
-var request = require("request");
-var progressBar = require("progress-bar").create(
+const fs = require("fs");
+const path = require("path");
+const EOL = require("os").EOL;
+const unzip = require("unzipper");
+const request = require("request");
+const progressBar = require("progress-bar").create(
   process.stdout,
   (process.stdout.columns || 70) - 20
 );
