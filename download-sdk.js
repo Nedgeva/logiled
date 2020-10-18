@@ -1,7 +1,6 @@
 const LOGITECH_LED_SDK_URL = "https://www.logitechg.com/sdk/LED_SDK_9.00.zip";
 
 const fs = require("fs/promises");
-const path = require("path");
 const axios = require("axios");
 const ProgressBar = require("progress");
 const unzip = require("unzip-stream");

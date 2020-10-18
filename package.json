@@ -39,11 +39,9 @@
     "nw-gyp": "^3.6.5",
     "prebuild": "^9.1.1",
     "progress": "^2.0.3",
-    "request": "^2.88.0",
     "ts-node": "^8.5.4",
     "typescript": "^3.7.2",
-    "unzip-stream": "^0.3.1",
-    "unzipper": "^0.10.5"
+    "unzip-stream": "^0.3.1"
   },
   "dependencies": {
     "bindings": "^1.5.0",
