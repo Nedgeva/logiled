@@ -13,6 +13,22 @@ NAN_METHOD(Init) {
     info.GetReturnValue().Set(Nan::New(result));
 }
 
+NAN_METHOD(InitWithName) {
+    Nan::MaybeLocal<v8::Object> arg0 = Nan::To<v8::Object>(info[0]);
+
+    if (arg0.IsEmpty()) {
+        info.GetReturnValue().Set(Nan::New(false));
+    } else {
+        v8::Local<v8::Object> obj = arg0.ToLocalChecked();
+
+        v8::Local<v8::Value> name = Nan::Get(obj, Nan::New("name").ToLocalChecked()).ToLocalChecked();
+
+        bool result = LogiLedInitWithName(*Nan::Utf8String(name));
+
+        info.GetReturnValue().Set(Nan::New(result));
+    }
+}
+
 NAN_METHOD(GetSdkVersion) {
     Nan::MaybeLocal<v8::Object> arg0 = Nan::To<v8::Object>(info[0]);
     if (arg0.IsEmpty()) {

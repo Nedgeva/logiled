@@ -9,6 +9,8 @@ NAN_MODULE_INIT(InitAll) {
 
   Nan::Set(target, Nan::New("init").ToLocalChecked(),
     Nan::GetFunction(Nan::New<FunctionTemplate>(Init)).ToLocalChecked());
+  Nan::Set(target, Nan::New("initWithName").ToLocalChecked(),
+    Nan::GetFunction(Nan::New<FunctionTemplate>(InitWithName)).ToLocalChecked());
   Nan::Set(target, Nan::New("getSdkVersion").ToLocalChecked(),
     Nan::GetFunction(Nan::New<FunctionTemplate>(GetSdkVersion)).ToLocalChecked());
 

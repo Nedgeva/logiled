@@ -11,6 +11,7 @@ const dummyVoidSdkFunction: any = function () { };
 export const dummy: LogiLed = {
 
     init: dummyBooleanSdkFunction,
+    initWithName: dummyBooleanSdkFunction,
 
     getSdkVersion: dummyBooleanSdkFunction,
     getConfigOptionNumber: dummyBooleanSdkFunction,

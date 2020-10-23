@@ -16,6 +16,10 @@ export enum DeviceType {
     Speaker = 0xe
 }
 
+export interface NameOptions {
+    name: string;
+}
+
 export interface SdkVersion {
     majorNum?: number;
     minorNum?: number;
@@ -99,6 +103,12 @@ export interface LogiLed {
      * @returns If the function succeeds, it returns true. Otherwise false. If it returns false, means that the connection with Logitech Gaming Software is broken, make sure that it is running.
      */
     init(): boolean;
+
+    /**
+     * Makes sure there isn’t already another instance running and then makes necessary initializations. It saves the current lighting for all connected and supported devices.This function will also stop any effect currently going on the connected devices.
+     * @returns If the function succeeds, it returns true. Otherwise false. If it returns false, means that the connection with Logitech Gaming Software is broken, make sure that it is running.
+     */
+    initWithName(options: NameOptions): boolean;
 
     /**
      * Retrieves the version of the SDK version installed on the user’s system.

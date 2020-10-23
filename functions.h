@@ -4,6 +4,7 @@
 #include <nan.h>
 
 NAN_METHOD(Init);
+NAN_METHOD(InitWithName);
 
 NAN_METHOD(GetSdkVersion);
 NAN_METHOD(GetConfigOptionNumber);

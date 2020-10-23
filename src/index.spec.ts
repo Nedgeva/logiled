@@ -41,6 +41,32 @@ describe('logiled', function() {
     setTimeout(done, 250);
   });
 
+  it('should finalize sdk', function() {
+    logiled.shutdown();
+  });
+
+  it('should initialize sdk with name', function(done) {
+    this.slow(500);
+    this.timeout(1000);
+
+    var result = logiled.initWithName({ name:'test' });
+    assert.equal(typeof result, 'boolean');
+    assert.equal(result, true);
+
+    setTimeout(done, 250);
+  });
+
+  it('shouldnt initialize sdk with same name', function(done) {
+    this.slow(500);
+    this.timeout(1000);
+
+    var result = logiled.initWithName({ name:'test' });
+    assert.equal(typeof result, 'boolean');
+    assert.equal(result, false);
+
+    setTimeout(done, 250);
+  });
+
   it('should get sdk version', function() {
 
     var version: SdkVersion = { };
@@ -54,9 +80,7 @@ describe('logiled', function() {
       assert.equal(typeof version.minorNum, 'number');
       assert.equal(typeof version.buildNum, 'number');
     }
-  });
 
-  it('should finalize sdk', function() {
     logiled.shutdown();
   });
 
